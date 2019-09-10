@@ -112,15 +112,8 @@
   </dependencies>
 
   <build>
+    <finalName>petclinic</finalName>
     <plugins>
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.3</version>
-        <configuration>
-          <warName>petclinic.war</warName>
-        </configuration>
-      </plugin>
      <plugin>
          <groupId>org.apache.tomcat.maven</groupId>
          <artifactId>tomcat7-maven-plugin</artifactId>
@@ -130,6 +123,8 @@
          <url>http://144.38.193.251:8080/manager/text</url>
          <warFile>target\petclinic.war</warFile>
          <path>/petclinic</path>
+         <username>admin</username>
+        <password>cloud@123</password>
          </configuration>
      </plugin>  
       <plugin>
